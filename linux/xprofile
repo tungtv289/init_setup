@@ -1,0 +1,10 @@
+#!/bin/sh
+xrandr --output eDP-1 --off \
+       --output DP-1 --primary --auto \
+       --output HDMI-1 --auto --right-of DP-1
+
+
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS="@im=ibus"
+ibus-daemon -drx
