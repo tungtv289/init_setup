@@ -5,4 +5,5 @@ https://github.com/LazyVim/LazyVim/discussions/2730
 gnome-session-properties
 
 setxkbmap -option altwin:swap_alt_win
-setxkbmap -option caps:escape
+
+setxkbmap -option caps:swapescape
