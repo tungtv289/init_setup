@@ -192,6 +192,13 @@ bar {
     }
 }
 
+# Ref: https://thomashunter.name/i3-configurator/
+client.focused          #7aa2f7 #3d59a1 #c0caf5 #7aa2f7 #7dcfff
+client.focused_inactive #3b4261 #1e1e2e #a9b1d6 #3b4261 #3b4261
+client.unfocused        #1a1b26 #1a1b26 #565f89 #1a1b26 #1a1b26
+client.urgent           #f7768e #f7768e #1a1b26 #f7768e #f7768e
+client.placeholder      #000000 #0c0c0c #ffffff #000000 #000000
+
 
 # Định nghĩa workspace trên màn hình
 workspace 1 output DP-1
