@@ -237,7 +237,3 @@ workspace 3 output HDMI-1
 bindsym Ctrl+$mod+l exec --no-startup-id i3lock -c 000000
 # Chụp vùng màn hình và lưu vào clipboard với Ctrl+Shift+4
 bindsym Ctrl+Shift+4 exec --no-startup-id sh -c "gnome-screenshot -a -f /tmp/screenshot.png && xclip -selection clipboard -t image/png -i /tmp/screenshot.png && rm /tmp/screenshot.png"
-
-
-exec --no-startup-id setxkbmap -option altwin:swap_alt_win
-exec --no-startup-id setxkbmap -option caps:swapescape
