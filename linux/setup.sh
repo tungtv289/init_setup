@@ -19,3 +19,6 @@ make CMAKE_BUILD_TYPE=Release
 sudo apt remove gnome-calendar gnome-characters gnome-sudoku gnome-mahjongg gnome-logs gnome-font-viewer gnome-getting-started-docs gnome-initial-setup gnome-todo
 sudo apt purge gedit totem gnome-calculator mousetweaks gnome-menus gnome-terminal
 sudo apt autoremove --purge
+
+# install lib for postman
+sudo apt install -y libgl1
