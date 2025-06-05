@@ -23,7 +23,7 @@ mv ./warp-terminal/* ~/.config/warp-terminal/
 git clone https://github.com/neovim/neovim.git
 git checkout v0.11.1
 make CMAKE_BUILD_TYPE=Release
-make CMAKE_BUILD_TYPE=Release
+sudo make install
 
 
 # prune gnome
