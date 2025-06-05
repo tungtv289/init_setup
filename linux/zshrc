@@ -126,8 +126,9 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export M2_HOME=/opt/apache-maven-3.8.8
 export PATH=${M2_HOME}/bin:${PATH}
 
-export JAVA_HOME="/usr/lib/java/jdk1.8.0_202"
+# export JAVA_HOME="/usr/lib/java/jdk1.8.0_202"
 #export JAVA_HOME="/home/ubuntu/.jdks/jbr-17.0.7"
+export JAVA_HOME="/home/ubuntu/.jdks/temurin-23.0.1"
 export PATH=$JAVA_HOME/bin:$PATH
 
 export GO_HOME="/usr/local/go"
@@ -137,6 +138,7 @@ export PATH=$GO_HOME/bin:$PATH
 
 alias vi="nvim"
 alias vim="nvim"
+alias vscode="nvim"
 alias zooinspector="/opt/zooinspector/target/zooinspector-pkg/bin/zooinspector.sh"
 alias jd-gui="java -jar /opt/jd-gui-1.6.6.jar"
 alias top10mem="ps -eo pid,ppid,cmd,comm,%mem,%cpu --sort=-%mem | head -10"
