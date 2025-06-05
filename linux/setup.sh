@@ -1,4 +1,7 @@
 # setup i3
+sudo apt install i3
+sudo apt install i3status dmenu feh lxappearance rofi xclip unzip
+
 mkdir -p ~/.config/i3/
 mv ./i3/* ~/.config/i3/
 
