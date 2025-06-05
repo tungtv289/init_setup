@@ -1,13 +1,20 @@
 # setup i3
 mkdir -p ~/.config/i3/
-mv ./i3_config ~/.config/i3/config
-mv ./i3status_config ~/.config/i3status/config
+mv ./i3/* ~/.config/i3/
+
+mkdir -p ~/.config/i3status/
+mv ./i3status/* ~/.config/i3status/
 
 mv ./xprofile ~/.xprofile
 mv ./zshrc ~/.zshrc
 
 # setup terminator
-mv ./terminator_config ~/.config/terminator/config
+mkdir -p ~/.config/terminator/
+mv ./terminator/* ~/.config/terminator/
+
+mkdir -p ~/.config/warp-terminal/
+mv ./warp-terminal/* ~/.config/warp-terminal/
+
 
 # setup nvim
 git clone https://github.com/neovim/neovim.git
