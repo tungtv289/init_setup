@@ -4,6 +4,9 @@ sudo apt install i3status dmenu feh lxappearance rofi xclip unzip
 
 mkdir -p ~/.config/i3/
 mv ./i3/* ~/.config/i3/
+chmod +x ~/.config/i3/i3-workspace-setup.sh
+chmod +x ~/.config/i3/screen-setup.sh
+chmod +x ~/.config/i3/setup-all.sh
 
 mkdir -p ~/.config/i3status/
 mv ./i3status/* ~/.config/i3status/
