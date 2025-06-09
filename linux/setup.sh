@@ -2,6 +2,13 @@
 sudo apt install i3
 sudo apt install i3status dmenu feh lxappearance rofi xclip unzip
 
+mkdir -p /tmp/nerd-fonts-temp && cd /tmp/nerd-fonts-temp
+curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/0xProto.zip
+unzip 0xProto.zip -d 0xProto
+mkdir -p  ~/.local/share/fonts/NerdFonts
+sudo cp 0xProto/*.ttf ~/.local/share/fonts/NerdFonts/*.ttf
+sudo cp ~/.local/share/fonts/NerdFonts/*.ttf /usr/share/fonts/nerdfonts
+rm -rf /tmp/nerd-fonts-temp
 mkdir -p ~/.config/i3/
 mv ./i3/* ~/.config/i3/
 chmod +x ~/.config/i3/i3-workspace-setup.sh
