@@ -1,30 +1,21 @@
 #!/bin/bash
 
-# Lấy danh sách các output đã kết nối
-CONNECTED_OUTPUTS=$(xrandr | grep " connected" | cut -d" " -f1)
-
-# Hàm log cho debug (tuỳ chọn)
-log() {
-  echo "[INFO] $1"
+move_workspace() {
+  WS=$1
+  OUT=$2
+  if xrandr | grep -A1 "^$OUT connected" | grep -q " connected"; then
+    i3-msg "workspace $WS; move workspace to output $OUT"
+  else
+    echo "[WARN] Output $OUT not available: skipping $WS"
+  fi
 }
 
-if echo "$CONNECTED_OUTPUTS" | grep -q "^DP-1$" && echo "$CONNECTED_OUTPUTS" | grep -q "^HDMI-1$"; then
-  # Cấu hình ở công ty: DP-1 + HDMI-1
-  log "Detected office setup: DP-1 + HDMI-1"
-  xrandr --output eDP-1 --off \
-         --output DP-1 --primary --auto \
-         --output HDMI-1 --auto --right-of DP-1
+# Xác định 2 màn hình chính: DP-1 (trái), HDMI-1 (phải)
+LEFT_OUTPUT="DP-1"
+RIGHT_OUTPUT="HDMI-1"
 
-elif echo "$CONNECTED_OUTPUTS" | grep -q "^DP-1$"; then
-  # Cấu hình ở nhà: eDP-1 + DP-1
-  log "Detected home setup: eDP-1 + DP-1"
-  xrandr --output eDP-1 --primary --auto \
-         --output DP-1 --auto --right-of eDP-1
-
-else
-  # Chỉ dùng màn hình laptop
-  log "Detected laptop-only setup"
-  xrandr --output eDP-1 --auto --primary \
-         --output DP-1 --off \
-         --output HDMI-1 --off
-fi
+# Gán 1L–4L cho màn hình trái, 1R–4R cho phải
+for i in $(seq 1 4); do
+  move_workspace "${i}L" "$LEFT_OUTPUT"
+  move_workspace "${i}R" "$RIGHT_OUTPUT"
+done

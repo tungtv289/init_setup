@@ -1,6 +1,6 @@
 # setup i3
 sudo apt install i3
-sudo apt install i3status dmenu feh lxappearance rofi xclip unzip
+sudo apt install i3status dmenu feh lxappearance rofi xclip unzip jq
 
 mkdir -p /tmp/nerd-fonts-temp && cd /tmp/nerd-fonts-temp
 curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/0xProto.zip
